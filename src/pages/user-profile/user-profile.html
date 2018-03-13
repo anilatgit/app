@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar color="dark">
+        <ion-title>user-profile</ion-title>
+    </ion-navbar>
+
+</ion-header>
+<ion-content padding class="signup">
+    <h4>Enter Personal Details</h4>
+    <ion-list>
+
+        <ion-item>
+            <ion-label floating>Full Name</ion-label>
+            <ion-input [(ngModel)]="userprofile.fullname" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Gender</ion-label>
+            <ion-select [(ngModel)]="userprofile.gender">
+                <ion-option value="female">Female</ion-option>
+                <ion-option value="male">Male</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Date of Birth</ion-label>
+            <ion-datetime displayFormat="DD MMM, YYYY" pickerFormat="DD MMM YYYY" [(ngModel)]="userprofile.dob"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Phone Number</ion-label>
+            <ion-input [(ngModel)]="userprofile.phone" type="number"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Select Profession</ion-label>
+            <ion-select [(ngModel)]="userprofile.profession">
+                <ion-option value="principal">Principal</ion-option>
+                <ion-option value="teacher">Teacher</ion-option>
+                <ion-option value="student">Student</ion-option>
+                <ion-option value="parent">Parent</ion-option>
+                <ion-option value="other">Other</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>School/College name</ion-label>
+            <ion-input [(ngModel)]="schoolName_collegeName" type="text"></ion-input>
+        </ion-item>
+        <button ion-button block (click)="createUserProfile()">Submit</button>
+
+    </ion-list>
+</ion-content>
